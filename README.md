@@ -7,3 +7,4 @@ Feels good to have an idea go to an actual program again, it's a nice feeling...
 
 I'll probably continue extending it and making the program structure neater in the near future.
 
+Only dependency is requests, everything eles is standard python libs
