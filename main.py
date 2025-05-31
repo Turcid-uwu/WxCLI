@@ -5,8 +5,8 @@ from time import sleep
 import os
 
 #Constants
-URL = "https://api.weather.gov/alerts/active/zone/TXC027" #api endpoint for active weather alerts
-# use api.weather.gov/alerts/active?={your state} for state wide
+URL = "https://api.weather.gov/alerts/active?area=TX" #api endpoint for active weather alerts
+# use api.weather.gov/alerts/active?area={your state} for state wide
 # use api.weather.gov/alerts/active/zone/{your NWS county code} for county wide alerts
 
 NWS_OFFICE = "NWS Fort Worth TX" # Local forcast office, make sure this is set to your forcast office
