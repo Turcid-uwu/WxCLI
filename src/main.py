@@ -10,7 +10,7 @@ def main():
   
     while True:
         os.system('clear')
-        req = requests.get(URL)
+        req = requests.get(URL, headers=HEADERS)
         rawResponse = json.loads(req.content)
         alerts = parseAlerts(rawResponse)
 

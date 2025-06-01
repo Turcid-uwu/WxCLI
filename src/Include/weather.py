@@ -8,7 +8,7 @@ URL = "https://api.weather.gov/alerts/active?area=TX" #api endpoint for active w
 
 NWS_OFFICE = "NWS Fort Worth TX" # Local forcast office, make sure this is set to your forcast office
 
-HEADERS = "" # Custom headers, If you want them 
+HEADERS = {'user-agent': 'WxCLI-0.0.1 | turicd@protonmail.com'} # Custom headers, for identifcation!
 
 #Classes
 
