@@ -58,7 +58,7 @@ def parseAlerts(content): # parse the values we want from the api response
 
             if alert['properties']['senderName'] == NWS_OFFICE: # Not really needed if going by county, but still helpful to have
 
-                nAlert = WxAlert(alert['properties']['event'], alert['properties']['areaDesc'], alert['properties']['parameters']['NWSheadline'][0]) 
+                nAlert = WxAlert(alert['properties']['event'], alert['properties']['areaDesc'], alert['properties']['headline']) 
                 alertList.append(nAlert)
         
         alertList.sort(key=lambda x: x.mark, reverse=True)
