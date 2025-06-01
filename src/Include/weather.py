@@ -32,17 +32,17 @@ class WxAlert: #Using a class will make extending functionality easier later
         
         elif 'Special Weather Statement' in self.event:
             self.mark = 7
-        
-        elif 'Watch' in self.event and 'Tornado' in self.event:
-            self.mark = 6
-
-        elif 'Watch' in self.event and 'Thunderstorm' in self.event:
-            self.mark = 5
 
         elif 'Warning' in self.event and 'Flood' in self.event:
+            self.mark = 6
+
+        elif 'Watch' in self.event and 'Tornado' in self.event:
+            self.mark = 5
+
+        elif 'Watch' in self.event and 'Thunderstorm' in self.event:
             self.mark = 4
 
-        elif 'Flood' in self.event and 'Watch' in self.event:
+        elif 'Watch' in self.event and 'Flood' in self.event:
             self.mark = 3
 
 
