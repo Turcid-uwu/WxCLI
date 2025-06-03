@@ -23,12 +23,13 @@ def main():
 
         if alerts != IndexError:
 
-            print('*---------------------------------------------------*')
+            print('*---------------------------------------------------*', end='')
+            print('\n')
             for alert in alerts:
                 print(alert.event)
                 print(alert.area)
                 print(alert.desc)
-                print('\n')
+                print('\n', end='')
                 sleep(2)
             print('*---------------------------------------------------*')
             sleep(60)
