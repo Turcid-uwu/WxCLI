@@ -49,7 +49,7 @@ def setup(args): # Setup vars form given args
     main(URL, NWS_OFFICE)
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(prog='WxCLI 0.0.2', description='A command line app that pulls the current watches in a given area.')
+    parser = argparse.ArgumentParser(prog='WxCLI', description='A command line app that pulls the current watches in a given area.')
     parser.add_argument('NWS_STATION', help='Full name of the desired NWS forcast station')
     parser.add_argument('STATE', help='Initals of the desired state. ex:TX, FL, OK')
     args = parser.parse_args()
