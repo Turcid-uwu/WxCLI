@@ -13,6 +13,6 @@ BEEG UPDATE!!!!!
 You can now select which area you would like to veiw alerts from! 
 The quotes are neccesary for the NWS office.
 
-USAGE: main.py [Your NWS forcast office] [Your state]
+USAGE: WxCLI [Your NWS forcast office] [Your state]
 
-ex: main.py "NWS Fort Worth TX" TX
+ex: WxCLI "NWS Fort Worth TX" TX
