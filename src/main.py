@@ -5,8 +5,9 @@ from time import sleep
 import os
 from Include.weather import *
 from Include.parse import *
+import argparse
 
-def main():
+def main(url, nws):
 
     # Get OS name
     osName = os.name
@@ -17,9 +18,9 @@ def main():
   
     while True:
         os.system(CLEARCMD)
-        req = requests.get(URL, headers=HEADERS)
+        req = requests.get(url, headers=HEADERS)
         rawResponse = json.loads(req.content)
-        alerts = parseAlerts(rawResponse)
+        alerts = parseAlerts(rawResponse, nws)
 
         if alerts != IndexError:
 
@@ -40,5 +41,16 @@ def main():
             sleep(60)
             os.system(CLEARCMD)
 
+def setup(args): # Setup vars form given args
+    #use api.weather.gov/alerts/active?area={your state} for state wide
+
+    URL = "https://api.weather.gov/alerts/active?area=" + args.STATE #api endpoint for active weather alerts
+    NWS_OFFICE = args.NWS_STATION # Local forcast office, make sure this is set to your forcast office
+    main(URL, NWS_OFFICE)
+
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(prog='WxCLI 0.0.2', description='A command line app that pulls the current watches in a given area.')
+    parser.add_argument('NWS_STATION', help='Full name of the desired NWS forcast station')
+    parser.add_argument('STATE', help='Initals of the desired state. ex:TX, FL, OK')
+    args = parser.parse_args()
+    setup(args)

@@ -1,14 +1,6 @@
 
-#Constants
 
-# use api.weather.gov/alerts/active?area={your state} for state wide
-# use api.weather.gov/alerts/active/zone/{your NWS county code} for county wide alerts
-
-URL = "https://api.weather.gov/alerts/active?area=TX" #api endpoint for active weather alerts
-
-NWS_OFFICE = "NWS Fort Worth TX" # Local forcast office, make sure this is set to your forcast office
-
-HEADERS = {'user-agent': 'WxCLI-0.0.1 | turicd@protonmail.com'} # Custom headers, for identifcation!
+HEADERS = {'user-agent': 'WxCLI-0.0.2 | turicd@protonmail.com'} # Custom headers, for identifcation!
 
 #Classes
 
