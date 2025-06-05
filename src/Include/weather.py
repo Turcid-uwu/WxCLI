@@ -1,7 +1,3 @@
-
-
-HEADERS = {'user-agent': 'WxCLI-0.0.2 | turicd@protonmail.com'} # Custom headers, for identifcation!
-
 #Classes
 
 class WxAlert: #Using a class will make extending functionality easier later
