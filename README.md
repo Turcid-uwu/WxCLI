@@ -13,7 +13,8 @@ ex: WxCLI "NWS Fort Worth TX" TX
 
 BUILDING
 
-Use pyinstaller for building
-Only dependency is requests, everything else is standard python libs
+Bulit with pyinstaller on Python 3.13
+Dependencies:
+-requests
 
 pyinstaller --name WxCLI -F -c /path/to/main.py
