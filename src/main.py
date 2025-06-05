@@ -12,7 +12,7 @@ def main(url, nws):
 
     # Get OS name
     osName = os.name
-    
+
     if osName == 'posix':
         CLEARCMD = 'clear'
     else:
@@ -44,8 +44,6 @@ def main(url, nws):
             os.system(CLEARCMD)
 
 def setup(args): # Setup vars form given args
-    #use api.weather.gov/alerts/active?area={your state} for state wide
-
     URL = "https://api.weather.gov/alerts/active?area=" + args.STATE #api endpoint for active weather alerts
     NWS_OFFICE = args.NWS_STATION # Local forcast office, make sure this is set to your forcast office
     main(URL, NWS_OFFICE)
