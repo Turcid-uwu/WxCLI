@@ -14,7 +14,7 @@ def parseAlerts(content, nws): # parse the values we want from the api response
                 nAlert = WxAlert(alert['properties']['event'], alert['properties']['areaDesc'], alert['properties']['headline']) 
                 alertList.append(nAlert)
         
-        if alertList.count() == 0:
+        if len(alertList) == 0:
             return IndexError #Needed so that if after creating the alert list the no warnings message will show if on alerts are present
         
         else:
