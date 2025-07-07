@@ -9,6 +9,7 @@ USAGE: WxCLI [Your NWS forcast office] [Your state]
 
 ex: WxCLI "NWS Fort Worth TX" TX
 
+UwU
 *****************************************************************
 
 BUILDING
