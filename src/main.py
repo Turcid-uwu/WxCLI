@@ -44,13 +44,12 @@ def main(url, nws):
             os.system(CLEARCMD)
 
 def setup(args): # Setup vars form given args
-    URL = "https://api.weather.gov/alerts/active?area=" + args.STATE #api endpoint for active weather alerts
+    URL = "https://api.weather.gov/alerts/active?area=" + args.NWS_STATION[-2:] #api endpoint for active weather alerts
     NWS_OFFICE = args.NWS_STATION # Local forcast office, make sure this is set to your forcast office
     main(URL, NWS_OFFICE)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='WxCLI', description='A command line app that pulls the current watches in a given area.')
     parser.add_argument('NWS_STATION', help='Full name of the desired NWS forcast station')
-    parser.add_argument('STATE', help='Initals of the desired state. ex:TX, FL, OK')
     args = parser.parse_args()
     setup(args)
