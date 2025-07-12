@@ -8,7 +8,7 @@ from Include.parse import *
 import argparse
 
 def main(url, nws):
-    HEADERS = {'user-agent': 'WxCLI-0.0.2 | turicd@protonmail.com'} # Custom headers, for identifcation!
+    HEADERS = {'user-agent': 'wxcli-0.1.0 | turicd@protonmail.com'} # Custom headers, for identifcation!
 
     # Get OS name
     osName = os.name
