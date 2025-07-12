@@ -5,9 +5,9 @@ This also marks the first time I have used an API, and the first time I have man
 
 *****************************************************************
 
-USAGE: WxCLI [Your NWS forcast office] [Your state]
+USAGE: wxcli [Your NWS forcast office]
 
-ex: WxCLI "NWS Fort Worth TX" TX
+ex: wxcli "NWS Fort Worth TX"
 
 UwU
 *****************************************************************
@@ -22,4 +22,4 @@ Dependencies:
 -requests
 
 
-pyinstaller --name WxCLI -F -c /path/to/main.py
+pyinstaller --name wxcli -F -c /path/to/main.py
