@@ -9,27 +9,27 @@ class WxAlert: #Using a class will make extending functionality easier later
         self.setMark()
 
     def setMark(self): #Assign a mark to the alert to determine importance so the list can be sorted
-        if 'Emergency' in self.event and 'Tornado' in self.event:
+        if 'Tornando Emergency' in self.event:
             self.mark = 10
 
-        elif 'Warning' in self.event and 'Tornado' in self.event:
+        elif 'Tornado Warning' in self.event:
             self.mark = 9
 
-        elif 'Warning' in self.event and 'Thunderstorm' in self.event:
+        elif 'Thunderstorm Warning' in self.event:
             self.mark = 8
         
         elif 'Special Weather Statement' in self.event:
             self.mark = 7
 
-        elif 'Warning' in self.event and 'Flood' in self.event:
+        elif 'Flood Warning' in self.event:
             self.mark = 6
 
-        elif 'Watch' in self.event and 'Tornado' in self.event:
+        elif 'Tornando Watch' in self.event:
             self.mark = 5
 
-        elif 'Watch' in self.event and 'Thunderstorm' in self.event:
+        elif 'Thunderstorm Watch' in self.event:
             self.mark = 4
 
-        elif 'Watch' in self.event and 'Flood' in self.event:
+        elif 'Flood Watch' in self.event:
             self.mark = 3
 
