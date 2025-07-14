@@ -13,7 +13,7 @@ def main(url, nws):
     # Get OS name
     osName = os.name
 
-    if osName == 'posix':
+    if osName == 'posix': #Lets it run on any os!
         CLEARCMD = 'clear'
     else:
         CLEARCMD = 'cls'
@@ -24,7 +24,7 @@ def main(url, nws):
         rawResponse = json.loads(req.content)
         alerts = parseAlerts(rawResponse, nws)
 
-        if alerts != IndexError:
+        if alerts != IndexError: # All is good!
 
             print('*---------------------------------------------------*', end='')
             print('\n')
@@ -32,7 +32,7 @@ def main(url, nws):
                 print(alert.event)
                 print(alert.area)
                 print(alert.desc)
-                print('\n', end='')
+                print('\n', end='') #Not sure why this here... prob important
                 sleep(2)
             print('*---------------------------------------------------*')
             sleep(60)
