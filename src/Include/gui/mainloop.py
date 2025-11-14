@@ -2,11 +2,12 @@
 
 from tkinter import *
 from tkinter import ttk
+
 root = Tk()
 root.geometry("600x750")
 root.title("WxCLI")
 window = ttk.Frame(root, padding=10)
 window.grid(column=3, row=3)
-ttk.Label(window, text="Current warnings for your area").grid(column=2, row=1)
+mainHeader = ttk.Label(window, text="Enter your NWS forcast Station").grid(column=2, row=1)
 
 root.mainloop()
